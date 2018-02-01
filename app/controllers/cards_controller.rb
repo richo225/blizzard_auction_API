@@ -1,14 +1,23 @@
 class CardsController < ApplicationController
+  before_action :set_card, only: :show
 
   def index
     @cards = Card.all
     render json: @cards
   end
 
+  def show
+    render json: @card
+  end
+
   private
 
+  def set_card
+    @card = Card.find(card_params[:id])
+  end
+
   def card_params
-    params.require(:cards).permit(
+    params.permit(
       :id,
       :artist,
       :attack,

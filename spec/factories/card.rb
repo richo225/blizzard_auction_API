@@ -1,4 +1,4 @@
-FactoryGirl.define do
+FactoryBot.define do
   factory :card do
     name 'Big Boy'
     card_class 'HUNTER'
