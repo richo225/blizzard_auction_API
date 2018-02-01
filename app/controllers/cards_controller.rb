@@ -3,11 +3,11 @@ class CardsController < ApplicationController
 
   def index
     @cards = Card.all
-    json_response(@cards)
+    render json: @cards
   end
 
   def show
-    json_response(@card)
+    render json: @card
   end
 
   private
