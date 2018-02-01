@@ -39,7 +39,7 @@ group :development do
 end
 
 group :test do
-  gem 'factory_girl_rails'
+  gem 'factory_bot_rails'
   gem 'pry-byebug'
 end
 
